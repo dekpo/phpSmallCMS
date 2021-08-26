@@ -1,0 +1,2 @@
+<div class="card-body"><h5 class="card-title">Un Loup</h5>
+<p class="card-text">L&#039;espèce a plusieurs noms vernaculaires : loup gris loup commun loup vulgaire ou encore loup. On peut aussi ajouter...</p></div>

@@ -1,0 +1,2 @@
+<div class="card-body"><h5 class="card-title">Card Title</h5>
+<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus totam laborum eligendi rerum, voluptatem consequatur...</p></div>

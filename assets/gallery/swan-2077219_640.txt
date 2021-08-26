@@ -1,0 +1,2 @@
+<div class="card-body"><h5 class="card-title">Un Cygne</h5>
+<p class="card-text">Les cygnes sont les plus grands membres de la famille des Anatidae, et sont parmi les plus gros oiseaux volants ...</p></div>
