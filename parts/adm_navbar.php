@@ -14,11 +14,15 @@
         <li class="nav-item">
           <a class="nav-link" href="../gallery.php">Gallery</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../about.php">About</a>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle <?php if (strpos($_SERVER["PHP_SELF"],"admin")) echo "bg-primary text-white ps-2" ?>" id="navbarDropdown" role="button" data-bs-toggle="dropdown" href="#">Admin</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="./adm_home.php">Home</a></li>
             <li><a class="dropdown-item" href="./adm_gal.php">Gallery</a></li>
+            <li><a class="dropdown-item" href="./adm_about.php">About</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="./?logout">Logout</a></li>
           </ul>

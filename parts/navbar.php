@@ -15,6 +15,9 @@
           <a class="nav-link <?php if (strpos($_SERVER["PHP_SELF"],"gallery")) echo "active" ?>" href="./gallery.php">Gallery</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link <?php if (strpos($_SERVER["PHP_SELF"],"about")) echo "active" ?>" href="./about.php">About</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="./admin">Admin</a>
         </li>
       </ul> 
