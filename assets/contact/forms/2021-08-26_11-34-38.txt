@@ -1,0 +1,6 @@
+firstname: Dekpo-Wyna
+name: Yologaza
+email: dekpo@me.com
+phone: 0659913379
+message: Hello
+accept: on

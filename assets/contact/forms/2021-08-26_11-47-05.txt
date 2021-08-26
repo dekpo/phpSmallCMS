@@ -1,0 +1,6 @@
+firstname: Pierre
+name: Tombal
+email: machin@truc.fr
+phone: 045033333333
+message: Yo ! C'est moi
+accept: on
