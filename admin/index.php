@@ -37,6 +37,7 @@ if (!isset($_SESSION["auth"])) header("Location:../");
                     <li><a href="./adm_home.php">Handle Home</a></li>
                     <li><a href="./adm_gal.php">Handle Gallery</a></li>
                     <li><a href="./adm_about.php">Handle About</a></li>
+                    <li><a href="./adm_contact.php">Handle Contact</a></li>
                     <li><a href="./?logout">Logout</a></li>
                 </ul>
             </div>

@@ -18,6 +18,9 @@
           <a class="nav-link <?php if (strpos($_SERVER["PHP_SELF"],"about")) echo "active" ?>" href="./about.php">About</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link <?php if (strpos($_SERVER["PHP_SELF"],"contact")) echo "active" ?>" href="./contact.php">Contact</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="./admin">Admin</a>
         </li>
       </ul> 
