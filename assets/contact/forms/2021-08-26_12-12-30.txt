@@ -1,0 +1,6 @@
+firstname: John
+name: Snow
+email: john@hotmail.com
+phone: 0788888888
+message: Winter is coming !
+accept: on

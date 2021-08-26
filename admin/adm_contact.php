@@ -38,6 +38,23 @@ if (!empty($_POST)) {
                 </form>
             </div>
         </div>
+        <div class="row">
+            <div class="col">
+                <?php
+                $scan = scandir("../assets/contact/forms", SCANDIR_SORT_DESCENDING);
+                //print_r_pre($scan);
+                foreach ($scan as $k=>$v){
+                    if ($v != "." && $v != "..") {
+                        ?>
+                        <p>
+                        <?php echo nl2br(readAllTxt("../assets/contact/forms/".$v)); ?>
+                        </p>
+                        <?php
+                    }
+                }
+                ?>
+            </div>
+        </div>
     </div>
     <!-- Footer -->
     <?php include("../parts/footer.php") ?>
