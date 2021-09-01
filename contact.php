@@ -1,12 +1,12 @@
 <?php
 require("./inc/library.php");
-if (!empty($_POST)){
+if (!empty($_POST)) {
     $contact = "";
-    foreach($_POST as $k=>$v){
-        $contact .=$k.": ".clearInput($v)."\n";
+    foreach ($_POST as $k => $v) {
+        $contact .= $k . ": " . clearInput($v) . "\n";
     }
     //print_r_pre($contact);
-    writeAllTxt("./assets/contact/forms/". date("Y-m-d_H-i-s") . ".txt", $contact);
+    writeAllTxt("./assets/contact/forms/" . date("Y-m-d_H-i-s") . ".txt", $contact);
 }
 ?>
 <!doctype html>
@@ -54,6 +54,16 @@ if (!empty($_POST)){
                     <label for="phone" class="form-label">Phone</label>
                     <input type="text" class="form-control" id="phone" name="phone">
                 </div>
+                <div class="col-md-6">
+                    <label for="zip" class="form-label">Zip</label>
+                    <input onkeyup="loadTown(this.value)" type="text" class="form-control" id="zip" name="zip" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="town" class="form-label">Town</label>
+                    <select type="text" class="form-control" id="town" name="town" required>
+                        <option value="">Please insert your zip code</option>
+                    </select>
+                </div>
                 <div class="col-12">
                     <label for="address" class="form-label">Message</label>
                     <textarea id="message" name="message" rwo="5" class="form-control" style="width:100%" required></textarea>
@@ -76,6 +86,25 @@ if (!empty($_POST)){
     <!-- Footer -->
     <?php include("./parts/footer.php") ?>
     <!-- End Footer -->
+    <script>
+        const townSelect = document.getElementById('town');
+        function loadTown(str) {
+            let townOptions = "";
+            if (str.length<3) return;
+            fetch('./ajax/zipToTown.php?search='+str)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    console.log(data);
+                    let townOptions = "<option value=''>Please select your town</option>\n";
+                    for(let item of data){
+                        townOptions+="<option>"+item['ville_nom']+"</option>\n";
+                    }
+                    townSelect.innerHTML = townOptions;
+                });
+        }
+    </script>
 </body>
 
 </html>

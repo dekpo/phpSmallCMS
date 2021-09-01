@@ -1,5 +1,16 @@
 <?php
-// Fonction de logout()
+// Fonction PDO Connect
+function pdo_db($dsn,$user,$pwd,$dev=true){
+    try {
+        $pdo = new PDO($dsn,$user,$pwd);
+        if ($dev) $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } catch (PDOException $e) {
+        die("Oups PDO error: " . $e->getMessage());
+    }
+    return $pdo;
+}
+
+// Fonction de logout() Http auth
 function logOut(){
     header('HTTP/1.0 401 Unauthorized');
     die('<h1>Server says 401 (Unauthorized),<br> You must go <a href="../">Out !!!</a></h1>');
